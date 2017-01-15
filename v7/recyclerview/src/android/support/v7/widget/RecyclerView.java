@@ -11648,7 +11648,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
          * @param viewHolder The ViewHolder whose animation is finished.
          * @see #onAnimationFinished(ViewHolder)
          */
-        public final void dispatchAnimationFinished(ViewHolder viewHolder) {
+        public void dispatchAnimationFinished(ViewHolder viewHolder) {
             onAnimationFinished(viewHolder);
             if (mListener != null) {
                 mListener.onAnimationFinished(viewHolder);
@@ -11689,7 +11689,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
          * @param viewHolder The ViewHolder whose animation is starting.
          * @see #onAnimationStarted(ViewHolder)
          */
-        public final void dispatchAnimationStarted(ViewHolder viewHolder) {
+        public void dispatchAnimationStarted(ViewHolder viewHolder) {
             onAnimationStarted(viewHolder);
         }
 
@@ -11791,7 +11791,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
          * This method should be called by ItemAnimator implementations to notify
          * any listeners that all pending and active item animations are finished.
          */
-        public final void dispatchAnimationsFinished() {
+        public void dispatchAnimationsFinished() {
             final int count = mFinishedListeners.size();
             for (int i = 0; i < count; ++i) {
                 mFinishedListeners.get(i).onAnimationsFinished();
